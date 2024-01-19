@@ -7,6 +7,7 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+
 // template_msyvpol; tem id
 // service_sqksdar; ser id
 // vJ3mMAZ3yB_swMla5; key
@@ -37,9 +38,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        import.meta.env.EMAILJS_SERVICE_ID,
-        import.meta.env.EMAILJS_TEMPLATE_ID,
-
+        "service_sqksdar",
+        "template_msyvpol",
         {
           from_name: form.name,
           to_name: "Neetesh Kumar",
@@ -47,7 +47,7 @@ const Contact = () => {
           to_email: "",
           message: form.message,
         },
-        import.meta.env.EMAILJS_PUBLIC_KEY
+        "vJ3mMAZ3yB_swMla5"
       )
       .then(
         () => {
